@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Class names</title>
+</head>
+<body>
+  <h1>Class names</h1>
+  <ul id="names"></ul>
+  <script>
+    fetch("/names")
+      .then((r) => r.json())
+      .then((names) => {
+        const ul = document.getElementById("names");
+        for (const name of names) {
+          const li = document.createElement("li");
+          li.textContent = name;
+          ul.appendChild(li);
+        }
+      });
+  </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+.git
+venv
+.env
+__pycache__
+*.pyc
+pipF26_deploy_rong.2
